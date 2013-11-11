@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ie6-qI-bxY"/>
+                        <viewControllerLayoutGuide type="bottom" id="gTx-am-Fpx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Gr-fx-ECV">
+                                <rect key="frame" x="8" y="95" width="150" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.18823531269999999" green="0.47843140360000003" blue="0.83529418710000003" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dG7-uv-5an"/>
+                                    <constraint firstAttribute="width" constant="150" id="ejL-aI-Zh2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Subscribe">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSubscribe:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="26a-PX-Den"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcl-5i-U5E">
+                                <rect key="frame" x="8" y="163" width="150" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.18823531269999999" green="0.47843140360000003" blue="0.83529418710000003" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="98g-dJ-2tq"/>
+                                    <constraint firstAttribute="height" constant="60" id="s7t-VL-rnr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Unsubscribe">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnUnsubscribe:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vXx-ZW-Fhx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hS-tn-2pg">
+                                <rect key="frame" x="8" y="27" width="150" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.18823531269999999" green="0.47843140360000003" blue="0.83529418710000003" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="qQI-kd-yAW"/>
+                                    <constraint firstAttribute="height" constant="60" id="qnC-qQ-SUz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Show Subscribe">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnShowSubscribes:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3Ue-K9-CCI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ox5-PO-td4">
+                                <rect key="frame" x="9" y="375" width="150" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.18823531269999999" green="0.47843140360000003" blue="0.83529418710000003" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="HIl-Ew-Ore"/>
+                                    <constraint firstAttribute="height" constant="60" id="fSI-I9-lyS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSignIn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GUK-pF-pBm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOr-9N-e7h">
+                                <rect key="frame" x="9" y="498" width="150" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.18823531269999999" green="0.47843140360000003" blue="0.83529418710000003" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="UqF-Os-LGN"/>
+                                    <constraint firstAttribute="height" constant="60" id="gV6-f0-K9Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Current User">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnShowCurrentUser:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gka-bn-Ctc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPL-bb-LhV">
+                                <rect key="frame" x="9" y="436" width="150" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.18823531269999999" green="0.47843140360000003" blue="0.83529418710000003" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0FQ-4b-XEQ"/>
+                                    <constraint firstAttribute="height" constant="60" id="zt8-o5-Lej"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Login in">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="o3m-TY-0ZH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoO-fG-kqv">
+                                <rect key="frame" x="164" y="375" width="150" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1561605438" green="0.61909105330000003" blue="0.33865193090000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ECG-Nc-pRY"/>
+                                    <constraint firstAttribute="width" constant="150" id="lOe-SK-UVr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Authorize">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPermissions:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Dhe-hx-yVM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WuS-5g-O7C">
+                                <rect key="frame" x="164" y="498" width="150" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1561605438" green="0.61909105330000003" blue="0.33865193090000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="llR-HM-m0z"/>
+                                    <constraint firstAttribute="height" constant="60" id="uLv-lx-Cuz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="unlink">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnFacbookUnlink:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ToO-ET-xWl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKg-5F-qbV">
+                                <rect key="frame" x="164" y="436" width="150" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1561605438" green="0.61909105330000003" blue="0.33865193090000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="NsH-xx-vSu"/>
+                                    <constraint firstAttribute="height" constant="60" id="cvN-2U-W46"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Link">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnFacebookLink:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="J4G-tO-bqA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ob-iD-kai">
+                                <rect key="frame" x="164" y="313" width="150" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1561605438" green="0.61909105330000003" blue="0.33865193090000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Os4-J2-gmv"/>
+                                    <constraint firstAttribute="height" constant="60" id="Tll-si-ECK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnFacebookLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Gcd-Jj-52S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ol5-uZ-fYI">
+                                <rect key="frame" x="163" y="27" width="150" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.18823531269999999" green="0.47843140360000003" blue="0.83529418710000003" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="355-PA-tLX"/>
+                                    <constraint firstAttribute="height" constant="60" id="RId-Et-hcd"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="UsR-BV-K3Z"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="sVg-5G-hDp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="check">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCheckBuyItems:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="17R-yt-Khn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGe-Vs-Gfn">
+                                <rect key="frame" x="163" y="95" width="150" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.18823531269999999" green="0.47843140360000003" blue="0.83529418710000003" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Muo-23-GFf"/>
+                                    <constraint firstAttribute="height" constant="60" id="NPP-Qh-Q1B"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="cFi-gs-i8n"/>
+                                    <constraint firstAttribute="width" constant="150" id="x0b-3h-wUv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="buy">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnBuyItem:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gEH-Kf-ngp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KKg-5F-qbV" firstAttribute="top" secondItem="DoO-fG-kqv" secondAttribute="bottom" constant="1" id="2si-oV-cAK"/>
+                            <constraint firstItem="gTx-am-Fpx" firstAttribute="top" secondItem="HOr-9N-e7h" secondAttribute="bottom" constant="10" id="2v3-yF-zKB"/>
+                            <constraint firstItem="WuS-5g-O7C" firstAttribute="top" secondItem="KKg-5F-qbV" secondAttribute="bottom" constant="2" id="96x-8T-rH0"/>
+                            <constraint firstItem="Mcl-5i-U5E" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="8" id="AXJ-dB-dhb"/>
+                            <constraint firstItem="DoO-fG-kqv" firstAttribute="top" secondItem="4ob-iD-kai" secondAttribute="bottom" constant="2" id="C0R-sJ-PW3"/>
+                            <constraint firstItem="Mcl-5i-U5E" firstAttribute="top" secondItem="1Gr-fx-ECV" secondAttribute="bottom" constant="8" id="DdN-Ll-fVi"/>
+                            <constraint firstItem="YPL-bb-LhV" firstAttribute="top" secondItem="ox5-PO-td4" secondAttribute="bottom" constant="1" id="IgV-Fk-Vh0"/>
+                            <constraint firstItem="YPL-bb-LhV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="9" id="NFH-AH-4HC"/>
+                            <constraint firstItem="HOr-9N-e7h" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="9" id="NeO-0t-owG"/>
+                            <constraint firstAttribute="trailing" secondItem="4ob-iD-kai" secondAttribute="trailing" constant="6" id="QGN-qZ-73G"/>
+                            <constraint firstItem="KKg-5F-qbV" firstAttribute="top" secondItem="DoO-fG-kqv" secondAttribute="bottom" constant="1" id="ZGN-iu-bvF"/>
+                            <constraint firstItem="HOr-9N-e7h" firstAttribute="top" secondItem="YPL-bb-LhV" secondAttribute="bottom" constant="2" id="cOS-qg-P0D"/>
+                            <constraint firstAttribute="trailing" secondItem="DoO-fG-kqv" secondAttribute="trailing" constant="6" id="dkC-ee-sFh"/>
+                            <constraint firstItem="2hS-tn-2pg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="8" id="iyg-9K-szv"/>
+                            <constraint firstAttribute="trailing" secondItem="WuS-5g-O7C" secondAttribute="trailing" constant="6" id="k9x-xS-6PJ"/>
+                            <constraint firstAttribute="trailing" secondItem="KKg-5F-qbV" secondAttribute="trailing" constant="6" id="laq-hj-aik"/>
+                            <constraint firstItem="1Gr-fx-ECV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="8" id="mAI-Pc-KGO"/>
+                            <constraint firstItem="1Gr-fx-ECV" firstAttribute="top" secondItem="2hS-tn-2pg" secondAttribute="bottom" constant="8" id="ncM-Z3-RD3"/>
+                            <constraint firstItem="gTx-am-Fpx" firstAttribute="top" secondItem="WuS-5g-O7C" secondAttribute="bottom" constant="10" id="oQJ-3T-uvo"/>
+                            <constraint firstItem="WuS-5g-O7C" firstAttribute="top" secondItem="KKg-5F-qbV" secondAttribute="bottom" constant="2" id="ufM-Wp-Y9v"/>
+                            <constraint firstItem="2hS-tn-2pg" firstAttribute="top" secondItem="Ie6-qI-bxY" secondAttribute="bottom" constant="7" id="x8h-5j-cLk"/>
+                            <constraint firstItem="ox5-PO-td4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="9" id="zov-GX-tQS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46" y="57"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
