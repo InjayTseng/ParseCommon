@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "ParseCommon.h"
-@interface ViewController ()
 
+#import "DTParse.h"
+@interface ViewController ()<FBFriendPickerDelegate>
+@property (retain, nonatomic) FBFriendPickerViewController *friendPickerController;
 @end
 
 @implementation ViewController
@@ -22,79 +23,114 @@
 }
 - (IBAction)btnShowSubscribes:(id)sender {
 
-    [ParseCommon showSubscribeChannels];
+    [DTParse showSubscribeChannels];
 }
 - (IBAction)btnSubscribe:(id)sender {
     
-    [ParseCommon subscribeChannel:@"Youbike"];
+    [DTParse subscribeChannel:@"Youbike"];
 }
 - (IBAction)btnUnsubscribe:(id)sender {
     
-    [ParseCommon unsubscribeChannel:@"Youbike"];
+    [DTParse unsubscribeChannel:@"Youbike"];
 }
 
 - (IBAction)btnSignIn:(id)sender {
     
-    [ParseCommon signUpByName:@"David Tseng" andPassword:@"08220822"];
+    [DTParse signUpByName:@"David Tseng" andPassword:@"08220822"];
 }
 
 - (IBAction)btnLogin:(id)sender {
     
-    [ParseCommon loginByName:@"David Tseng" andPassword:@"08220822"];
+    [DTParse loginByName:@"David Tseng" andPassword:@"08220822"];
 }
 
 - (IBAction)btnShowCurrentUser:(id)sender {
     
-    [ParseCommon currentUser];
+    [DTParse currentUser];
 }
 
 - (IBAction)btnFacebookLogin:(id)sender {
     
-    [ParseCommon logInWithFacebookByPermissions:@[@"publish_stream"]];
+    [DTParse logInWithFacebookByPermissions:@[@"publish_stream",@"read_friendlists"]];
     
 }
 
 - (IBAction)btnPermissions:(id)sender {
     
-
-    [ParseCommon reauthorizeUserByPermissions:@[@"publish_stream"]];
+    [DTParse reauthorizeUserByPermissions:@[@"publish_stream",@"read_friendlists"]];
 
 }
 
 - (IBAction)btnFacebookLink:(id)sender {
     
-    [ParseCommon linkToFacebook:[PFUser currentUser]];
+    [DTParse linkToFacebook:[PFUser currentUser]];
 }
 
 - (IBAction)btnFacbookUnlink:(id)sender {
     
     
-    [ParseCommon unlinkToFacebook:[PFUser currentUser]];
-}
-
-#pragma mark - In-App Purchase
-
--(IBAction)btnCheckBuyItems:(id)sender{
-
-
-    [ParseCommon addObserverForProduct:@"com.inoinoletitbe.ParseCommon.adfree"];
+    [DTParse unlinkToFacebook:[PFUser currentUser]];
 }
 
 
--(IBAction)btnBuyItem:(id)sender{
+#pragma mark - Facebook Friend Picker
+
+- (IBAction)pickFriendsButtonClick:(id)sender {
+    // FBSample logic
+    // if the session is open, then load the data for our view controller
+    if (!FBSession.activeSession.isOpen) {
+        // if the session is closed, then we open it here, and establish a handler for state changes
+        [FBSession openActiveSessionWithReadPermissions:nil
+                                           allowLoginUI:YES
+                                      completionHandler:^(FBSession *session,
+                                                          FBSessionState state,
+                                                          NSError *error) {
+                                          if (error) {
+                                              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                                                  message:error.localizedDescription
+                                                                                                 delegate:nil
+                                                                                        cancelButtonTitle:@"OK"
+                                                                                        otherButtonTitles:nil];
+                                              [alertView show];
+                                          } else if (session.isOpen) {
+                                              [self pickFriendsButtonClick:sender];
+                                          }
+                                      }];
+        return;
+    }
     
-
-    [ParseCommon buyProduct:@"com.inoinoletitbe.ParseCommon.adfree"];
+    if (self.friendPickerController == nil) {
+        // Create friend picker, and get data loaded into it.
+        self.friendPickerController = [[FBFriendPickerViewController alloc] init];
+        self.friendPickerController.title = @"Pick Friends";
+        self.friendPickerController.delegate = self;
+    }
+    
+    [self.friendPickerController loadData];
+    [self.friendPickerController clearSelection];
+    [self presentViewController:self.friendPickerController animated:YES completion:nil];
 }
 
+- (void)facebookViewControllerDoneWasPressed:(id)sender {
+    NSMutableString *text = [[NSMutableString alloc] init];
+    
+    // we pick up the users from the selection, and create a string that we use to update the text view
+    // at the bottom of the display; note that self.selection is a property inherited from our base class
+    for (id<FBGraphUser> user in self.friendPickerController.selection) {
+        if ([text length]) {
+            [text appendString:@", "];
+        }
+        [text appendString:user.name];
+        [text appendString:[user id]];
+        NSLog(@"Choose %@",text);
+    }
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 
-
-
-
-
-
-
-
+- (void)facebookViewControllerCancelWasPressed:(id)sender {
+    NSLog(@"Cancel ");
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 
 
 - (void)didReceiveMemoryWarning

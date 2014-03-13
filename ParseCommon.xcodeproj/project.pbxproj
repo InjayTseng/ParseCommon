@@ -7,15 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F73EC97B18D19FD900B17F31 /* OpenVoiceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F73EC97A18D19FD900B17F31 /* OpenVoiceDataViewController.m */; };
+		F73EC98018D1A75A00B17F31 /* NearyByShopsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F73EC97D18D1A75A00B17F31 /* NearyByShopsViewController.m */; };
+		F73EC98118D1A75A00B17F31 /* NearyByShopsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F73EC97D18D1A75A00B17F31 /* NearyByShopsViewController.m */; };
+		F73EC98218D1A75A00B17F31 /* NearyByShopsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F73EC97D18D1A75A00B17F31 /* NearyByShopsViewController.m */; };
+		F73EC98318D1A75A00B17F31 /* NearyByShopsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F73EC97D18D1A75A00B17F31 /* NearyByShopsViewController.m */; };
+		F73EC98418D1A75A00B17F31 /* PlaceMapTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F73EC97F18D1A75A00B17F31 /* PlaceMapTwoViewController.m */; };
+		F73EC98518D1A75A00B17F31 /* PlaceMapTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F73EC97F18D1A75A00B17F31 /* PlaceMapTwoViewController.m */; };
+		F73EC98618D1A75A00B17F31 /* PlaceMapTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F73EC97F18D1A75A00B17F31 /* PlaceMapTwoViewController.m */; };
+		F73EC98718D1A75A00B17F31 /* PlaceMapTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F73EC97F18D1A75A00B17F31 /* PlaceMapTwoViewController.m */; };
 		F75D7A591830AF6D0055D7CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AA951318308CDF00A91C2F /* Foundation.framework */; };
 		F75D7A661830AF6D0055D7CA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AA953218308CDF00A91C2F /* XCTest.framework */; };
 		F75D7A671830AF6D0055D7CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AA951318308CDF00A91C2F /* Foundation.framework */; };
 		F75D7A681830AF6D0055D7CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AA951718308CDF00A91C2F /* UIKit.framework */; };
 		F75D7A6B1830AF6D0055D7CA /* liblibParseCommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F75D7A581830AF6D0055D7CA /* liblibParseCommon.a */; };
-		F75D7A7C1830B0600055D7CA /* ParseCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = F75D7A7B1830B0600055D7CA /* ParseCommon.m */; };
-		F75D7A7D1830B0600055D7CA /* ParseCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = F75D7A7B1830B0600055D7CA /* ParseCommon.m */; };
+		F75D7A7C1830B0600055D7CA /* DTParse.m in Sources */ = {isa = PBXBuildFile; fileRef = F75D7A7B1830B0600055D7CA /* DTParse.m */; };
+		F75D7A7D1830B0600055D7CA /* DTParse.m in Sources */ = {isa = PBXBuildFile; fileRef = F75D7A7B1830B0600055D7CA /* DTParse.m */; };
 		F75D7A7F1830D96E0055D7CA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75D7A7E1830D96E0055D7CA /* FacebookSDK.framework */; };
 		F75D7A801830D96E0055D7CA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75D7A7E1830D96E0055D7CA /* FacebookSDK.framework */; };
+		F775F53218D062EA0077100D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F775F53118D062EA0077100D /* Parse.framework */; };
+		F775F53318D062EA0077100D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F775F53118D062EA0077100D /* Parse.framework */; };
+		F775F53418D062EA0077100D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F775F53118D062EA0077100D /* Parse.framework */; };
+		F775F53518D062EA0077100D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F775F53118D062EA0077100D /* Parse.framework */; };
+		F775F53718D0642D0077100D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F775F53618D0642D0077100D /* FacebookSDK.framework */; };
+		F775F53818D0642D0077100D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F775F53618D0642D0077100D /* FacebookSDK.framework */; };
+		F775F53918D0642D0077100D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F775F53618D0642D0077100D /* FacebookSDK.framework */; };
+		F775F53A18D0642D0077100D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F775F53618D0642D0077100D /* FacebookSDK.framework */; };
 		F7AA951418308CDF00A91C2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AA951318308CDF00A91C2F /* Foundation.framework */; };
 		F7AA951618308CDF00A91C2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AA951518308CDF00A91C2F /* CoreGraphics.framework */; };
 		F7AA951818308CDF00A91C2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AA951718308CDF00A91C2F /* UIKit.framework */; };
@@ -28,7 +45,6 @@
 		F7AA953318308CDF00A91C2F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AA953218308CDF00A91C2F /* XCTest.framework */; };
 		F7AA953418308CDF00A91C2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AA951318308CDF00A91C2F /* Foundation.framework */; };
 		F7AA953518308CDF00A91C2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AA951718308CDF00A91C2F /* UIKit.framework */; };
-		F7AA954918308D9700A91C2F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AA954818308D9700A91C2F /* Parse.framework */; };
 		F7AA954B18308E2B00A91C2F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AA954A18308E2B00A91C2F /* AudioToolbox.framework */; };
 		F7AA954D18308E3000A91C2F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AA954C18308E3000A91C2F /* CFNetwork.framework */; };
 		F7AA954F18308E3C00A91C2F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AA954E18308E3C00A91C2F /* CoreLocation.framework */; };
@@ -70,11 +86,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F73EC97918D19FD900B17F31 /* OpenVoiceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenVoiceDataViewController.h; sourceTree = "<group>"; };
+		F73EC97A18D19FD900B17F31 /* OpenVoiceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenVoiceDataViewController.m; sourceTree = "<group>"; };
+		F73EC97C18D1A75A00B17F31 /* NearyByShopsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearyByShopsViewController.h; sourceTree = "<group>"; };
+		F73EC97D18D1A75A00B17F31 /* NearyByShopsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearyByShopsViewController.m; sourceTree = "<group>"; };
+		F73EC97E18D1A75A00B17F31 /* PlaceMapTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceMapTwoViewController.h; sourceTree = "<group>"; };
+		F73EC97F18D1A75A00B17F31 /* PlaceMapTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceMapTwoViewController.m; sourceTree = "<group>"; };
 		F75D7A581830AF6D0055D7CA /* liblibParseCommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibParseCommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F75D7A651830AF6D0055D7CA /* libParseCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libParseCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F75D7A7A1830B0600055D7CA /* ParseCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseCommon.h; sourceTree = "<group>"; };
-		F75D7A7B1830B0600055D7CA /* ParseCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseCommon.m; sourceTree = "<group>"; };
+		F75D7A7A1830B0600055D7CA /* DTParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTParse.h; sourceTree = "<group>"; };
+		F75D7A7B1830B0600055D7CA /* DTParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTParse.m; sourceTree = "<group>"; };
 		F75D7A7E1830D96E0055D7CA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		F775F53118D062EA0077100D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		F775F53618D0642D0077100D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		F7AA951018308CDF00A91C2F /* ParseCommon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseCommon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AA951318308CDF00A91C2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F7AA951518308CDF00A91C2F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,7 +115,6 @@
 		F7AA952B18308CDF00A91C2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F7AA953118308CDF00A91C2F /* ParseCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParseCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AA953218308CDF00A91C2F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		F7AA954818308D9700A91C2F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F7AA954A18308E2B00A91C2F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F7AA954C18308E3000A91C2F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F7AA954E18308E3C00A91C2F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -109,6 +132,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F75D7A591830AF6D0055D7CA /* Foundation.framework in Frameworks */,
+				F775F53918D0642D0077100D /* FacebookSDK.framework in Frameworks */,
+				F775F53418D062EA0077100D /* Parse.framework in Frameworks */,
 				F75D7A801830D96E0055D7CA /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +146,8 @@
 				F75D7A661830AF6D0055D7CA /* XCTest.framework in Frameworks */,
 				F75D7A681830AF6D0055D7CA /* UIKit.framework in Frameworks */,
 				F75D7A671830AF6D0055D7CA /* Foundation.framework in Frameworks */,
+				F775F53518D062EA0077100D /* Parse.framework in Frameworks */,
+				F775F53A18D0642D0077100D /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +165,9 @@
 				F7AA951618308CDF00A91C2F /* CoreGraphics.framework in Frameworks */,
 				F7AA954D18308E3000A91C2F /* CFNetwork.framework in Frameworks */,
 				F7AA954B18308E2B00A91C2F /* AudioToolbox.framework in Frameworks */,
+				F775F53218D062EA0077100D /* Parse.framework in Frameworks */,
+				F775F53718D0642D0077100D /* FacebookSDK.framework in Frameworks */,
 				F7AA951818308CDF00A91C2F /* UIKit.framework in Frameworks */,
-				F7AA954918308D9700A91C2F /* Parse.framework in Frameworks */,
 				F7AA951418308CDF00A91C2F /* Foundation.framework in Frameworks */,
 				F75D7A7F1830D96E0055D7CA /* FacebookSDK.framework in Frameworks */,
 			);
@@ -150,7 +178,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7AA953318308CDF00A91C2F /* XCTest.framework in Frameworks */,
+				F775F53818D0642D0077100D /* FacebookSDK.framework in Frameworks */,
 				F7AA953518308CDF00A91C2F /* UIKit.framework in Frameworks */,
+				F775F53318D062EA0077100D /* Parse.framework in Frameworks */,
 				F7AA953418308CDF00A91C2F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +211,7 @@
 		F7AA951218308CDF00A91C2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F775F53618D0642D0077100D /* FacebookSDK.framework */,
 				F75D7A7E1830D96E0055D7CA /* FacebookSDK.framework */,
 				F7AA955A18308E6A00A91C2F /* SystemConfiguration.framework */,
 				F7AA955818308E6300A91C2F /* StoreKit.framework */,
@@ -191,7 +222,6 @@
 				F7AA954E18308E3C00A91C2F /* CoreLocation.framework */,
 				F7AA954C18308E3000A91C2F /* CFNetwork.framework */,
 				F7AA954A18308E2B00A91C2F /* AudioToolbox.framework */,
-				F7AA954818308D9700A91C2F /* Parse.framework */,
 				F7AA951318308CDF00A91C2F /* Foundation.framework */,
 				F7AA951518308CDF00A91C2F /* CoreGraphics.framework */,
 				F7AA951718308CDF00A91C2F /* UIKit.framework */,
@@ -208,9 +238,16 @@
 				F7AA952518308CDF00A91C2F /* Main.storyboard */,
 				F7AA952818308CDF00A91C2F /* ViewController.h */,
 				F7AA952918308CDF00A91C2F /* ViewController.m */,
-				F75D7A7A1830B0600055D7CA /* ParseCommon.h */,
-				F75D7A7B1830B0600055D7CA /* ParseCommon.m */,
+				F73EC97C18D1A75A00B17F31 /* NearyByShopsViewController.h */,
+				F73EC97D18D1A75A00B17F31 /* NearyByShopsViewController.m */,
+				F73EC97E18D1A75A00B17F31 /* PlaceMapTwoViewController.h */,
+				F73EC97F18D1A75A00B17F31 /* PlaceMapTwoViewController.m */,
+				F73EC97918D19FD900B17F31 /* OpenVoiceDataViewController.h */,
+				F73EC97A18D19FD900B17F31 /* OpenVoiceDataViewController.m */,
+				F75D7A7A1830B0600055D7CA /* DTParse.h */,
+				F75D7A7B1830B0600055D7CA /* DTParse.m */,
 				F7AA952B18308CDF00A91C2F /* Images.xcassets */,
+				F775F53118D062EA0077100D /* Parse.framework */,
 				F7AA951A18308CDF00A91C2F /* Supporting Files */,
 			);
 			path = ParseCommon;
@@ -373,7 +410,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F75D7A7D1830B0600055D7CA /* ParseCommon.m in Sources */,
+				F73EC98618D1A75A00B17F31 /* PlaceMapTwoViewController.m in Sources */,
+				F75D7A7D1830B0600055D7CA /* DTParse.m in Sources */,
+				F73EC98218D1A75A00B17F31 /* NearyByShopsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +420,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F73EC98718D1A75A00B17F31 /* PlaceMapTwoViewController.m in Sources */,
+				F73EC98318D1A75A00B17F31 /* NearyByShopsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,10 +429,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F75D7A7C1830B0600055D7CA /* ParseCommon.m in Sources */,
+				F75D7A7C1830B0600055D7CA /* DTParse.m in Sources */,
 				F7AA952A18308CDF00A91C2F /* ViewController.m in Sources */,
+				F73EC98418D1A75A00B17F31 /* PlaceMapTwoViewController.m in Sources */,
 				F7AA952418308CDF00A91C2F /* AppDelegate.m in Sources */,
+				F73EC98018D1A75A00B17F31 /* NearyByShopsViewController.m in Sources */,
 				F7AA952018308CDF00A91C2F /* main.m in Sources */,
+				F73EC97B18D19FD900B17F31 /* OpenVoiceDataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +443,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F73EC98518D1A75A00B17F31 /* PlaceMapTwoViewController.m in Sources */,
+				F73EC98118D1A75A00B17F31 /* NearyByShopsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +491,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dtseng/Documents/ParseCommon,
+					"$(PROJECT_DIR)/ParseCommon",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "libParseCommon/libParseCommon-Prefix.pch";
@@ -466,6 +514,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dtseng/Documents/ParseCommon,
+					"$(PROJECT_DIR)/ParseCommon",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "libParseCommon/libParseCommon-Prefix.pch";
@@ -484,6 +534,8 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/ParseCommon",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "libParseCommon/libParseCommon-Prefix.pch";
@@ -507,6 +559,8 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/ParseCommon",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "libParseCommon/libParseCommon-Prefix.pch";
@@ -597,14 +651,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dtseng/Documents/ParseCommon,
+					"$(PROJECT_DIR)/ParseCommon",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseCommon/ParseCommon-Prefix.pch";
 				INFOPLIST_FILE = "ParseCommon/ParseCommon-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -615,14 +673,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/dtseng/Documents/ParseCommon,
+					"$(PROJECT_DIR)/ParseCommon",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseCommon/ParseCommon-Prefix.pch";
 				INFOPLIST_FILE = "ParseCommon/ParseCommon-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -636,6 +698,8 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/ParseCommon",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseCommon/ParseCommon-Prefix.pch";
@@ -659,6 +723,8 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/ParseCommon",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseCommon/ParseCommon-Prefix.pch";

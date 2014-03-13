@@ -14,8 +14,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [Parse setApplicationId:@"gaSSt6SwbMguMboimyFwv8i5QYt9LaS8boezkW63"
-                  clientKey:@"SeSkp7nl50v3gYHhGhR9k4gy0pmcSmrTArtpclMd"];
+    [Parse setApplicationId:@"TujgYVlhB62OBrzpTMBpHDRFAh9KRQc6lF0Gh0jK"
+                  clientKey:@"NfdmyQchH7BwAWBDzarfvTCmFLx6uEN6VBX9RErV"];
 
     if (application.applicationState != UIApplicationStateBackground) {
         // Track an app open here if we launch with a push, unless
@@ -81,10 +81,11 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [FBAppEvents activateApp];
+    [FBAppCall handleDidBecomeActive];
 }
+
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
@@ -100,5 +101,12 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
         NSLog(@"didFailToRegisterForRemoteNotificationsWithError: %@", error);
     }
 }
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+}
+
 
 @end

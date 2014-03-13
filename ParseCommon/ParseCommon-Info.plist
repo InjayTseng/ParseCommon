@@ -27,14 +27,14 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb246110852205800</string>
+				<string>fb627638143972616</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>FacebookAppID</key>
-	<string>246110852205800</string>
+	<string>627638143972616</string>
 	<key>FacebookDisplayName</key>
 	<string>Tester</string>
 	<key>LSRequiresIPhoneOS</key>
