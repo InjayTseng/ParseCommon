@@ -44,16 +44,22 @@
         }else{
             NSLog(@"指定位置.");
         }
-
+        
+        //畫面讀取中
+        [SVProgressHUD show];
+        
         //Call Cloud API
         [DTParse shopByLocation:self.location  andRange:0.5 WithSuccess:^(NSArray *objectArray) {
             
             [self setNearbyShops:objectArray];
             [self.tbView reloadData];
+            
+            //畫面讀取中消失
             [SVProgressHUD dismiss];
             
         } withFailure:^(NSError *err) {
             
+            //畫面讀取中消失
             [SVProgressHUD showErrorWithStatus:@"讀取失敗."];
         }];
         

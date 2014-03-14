@@ -40,8 +40,10 @@
 
 - (IBAction)btnGetShopClicked:(id)sender {
 
+    //不指定位置的Call法
     NearyByShopsViewController* nv = [self.storyboard instantiateViewControllerWithIdentifier:@"NearyByShopsViewController"];
     [self.navigationController pushViewController:nv animated:YES];
     
 }
+
 @end
