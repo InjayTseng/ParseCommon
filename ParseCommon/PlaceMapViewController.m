@@ -6,17 +6,17 @@
 //  Copyright (c) 2014 David Tseng. All rights reserved.
 //
 #import <QuartzCore/QuartzCore.h>
-#import "PlaceMapTwoViewController.h"
-
+#import "PlaceMapViewController.h"
+#import "OData.h"
 #define DEFAULT_LAT 25.032609
 #define DEFAULT_LON 121.558727
 #define TAG_LBTEXT 111
 
-@interface PlaceMapTwoViewController ()
+@interface PlaceMapViewController ()
 
 @end
 
-@implementation PlaceMapTwoViewController
+@implementation PlaceMapViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,21 +30,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if (self.targetLocation == nil) {
-        self.targetLocation = [[CLLocation alloc]initWithLatitude:DEFAULT_LAT longitude:DEFAULT_LON];
+    
+    //沒給TargetLocation就預設目前位子
+    if (self.targetLocation.latitude == 0 || self.targetLocation.longitude == 0) {
+        self.targetLocation = [[OData sharedManager] myLocation];
     }
     
     MKCoordinateRegion region;
-    region.center = [self.targetLocation coordinate];
+    region.center = self.targetLocation;
     region.span.latitudeDelta = 0.01;
     region.span.longitudeDelta = 0.01;
     
-    MKPointAnnotation *target = [[MKPointAnnotation alloc] init];
-    CLLocationCoordinate2D loc = [self.targetLocation coordinate];
-    target.coordinate = loc;
-    target.title = @"我的位置";
-    
-    [self.mapView addAnnotation:target];
+//    MKPointAnnotation *target = [[MKPointAnnotation alloc] init];
+//    CLLocationCoordinate2D loc = self.targetLocation;
+//    target.coordinate = loc;
+//    target.title = @"我的位置";
+//    [self.mapView addAnnotation:target];
+
     [self addPlaceAnnotations];
     
     self.mapView.delegate = self;
@@ -73,6 +75,10 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation{
 
+    if (annotation == mapView.userLocation) {
+        return nil;
+    }
+    
     static NSString *viewId = @"MKPinAnnotationView";
     MKPinAnnotationView *annotationView = (MKPinAnnotationView*)
     [self.mapView dequeueReusableAnnotationViewWithIdentifier:viewId];

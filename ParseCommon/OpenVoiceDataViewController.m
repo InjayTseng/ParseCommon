@@ -39,17 +39,9 @@
 }
 
 - (IBAction)btnGetShopClicked:(id)sender {
-    
-    
-    [DTParse shopByLocation:CLLocationCoordinate2DMake(25.0693449,  121.5168249) andRange:0.5 WithSuccess:^(NSArray *objectArray) {
-        
-        NearyByShopsViewController* nv = [self.storyboard instantiateViewControllerWithIdentifier:@"NearyByShopsViewController"];
-        [nv setNearbyShops:objectArray];
-        [self.navigationController pushViewController:nv animated:YES];
-        
-    } withFailure:^(NSError *err) {
-        
-    }];
+
+    NearyByShopsViewController* nv = [self.storyboard instantiateViewControllerWithIdentifier:@"NearyByShopsViewController"];
+    [self.navigationController pushViewController:nv animated:YES];
     
 }
 @end

@@ -7,7 +7,14 @@
 //
 
 #import "NearyByShopsViewController.h"
-#import "PlaceMapTwoViewController.h"
+#import "PlaceMapViewController.h"
+#import "PlaceDetailViewController.h"
+#import "SVProgressHUD.h"
+#import "DTParse.h"
+#import "OData.h"
+
+#define LAT_DEFAULT 25.0693449
+#define LON_DEFAULT 121.5168249
 
 @interface NearyByShopsViewController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -20,21 +27,51 @@
 
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
     self.tbView.delegate = self;
     self.tbView.dataSource = self;
+    
+    //如果沒有從外面設定Shops Data.
+    if (self.nearbyShops==nil) {
+        
+        //Safty
+        self.nearbyShops = [NSArray array];
+        
+        //經緯度沒給, 則取得現在位置.
+        if (self.location.longitude == 0. || self.location.latitude == 0. ){
+            NSLog(@"不指定位置. 依的現在位置找附近Shops.");
+            self.location = [[OData sharedManager] myLocation];
+        }else{
+            NSLog(@"指定位置.");
+        }
+
+        //Call Cloud API
+        [DTParse shopByLocation:self.location  andRange:0.5 WithSuccess:^(NSArray *objectArray) {
+            
+            [self setNearbyShops:objectArray];
+            [self.tbView reloadData];
+            [SVProgressHUD dismiss];
+            
+        } withFailure:^(NSError *err) {
+            
+            [SVProgressHUD showErrorWithStatus:@"讀取失敗."];
+        }];
+        
+    }else{
+    
+        //Data已經設定好,只是顯示.
+        [self.tbView reloadData];
+        [SVProgressHUD dismiss];
+    }
+    
+    //建立右上角的Button
     [self rightButtonCreate];
-//    [SVProgressHUD showWithStatus: @"讀取中"];
-//    [SVProgressHUD showWithStatus:@"讀取中..." maskType:SVProgressHUDMaskTypeClear];
-//    
-//    [SVProgressHUD showSuccessWithStatus:@"搜尋結果完畢"];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 
 -(void)rightButtonCreate{
     
+    //建立右上角的Button, 按下去會call mapModeClicked.
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"地圖模式"
                                                                     style:UIBarButtonItemStyleDone target:self action:@selector(mapModeClicked:)];
     self.navigationItem.rightBarButtonItem = rightButton;
@@ -42,10 +79,10 @@
 }
 
 - (void)mapModeClicked:(id)sender {
-    
 
-    PlaceMapTwoViewController *vm = [self.storyboard instantiateViewControllerWithIdentifier:@"PlaceMapTwoViewController"];
+    PlaceMapViewController *vm = [self.storyboard instantiateViewControllerWithIdentifier:@"PlaceMapViewController"];
     [vm setNearbyShops:self.nearbyShops];
+    [vm setTargetLocation:[[OData sharedManager] myLocation] ];
     [self.navigationController pushViewController:vm animated:YES];
 
 }
@@ -77,8 +114,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-//        cell.textLabel.font = [UIFont boldSystemFontOfSize:12];
-//        cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
         cell.detailTextLabel.textColor = [UIColor lightGrayColor];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
@@ -94,7 +129,6 @@
             }
             cell.accessoryType = UITableViewCellAccessoryNone;
             
-            
         }else{
             
             PFObject *place = [self.nearbyShops objectAtIndex:indexPath.row];
@@ -104,18 +138,8 @@
         }
     }
     
-    
-    //    cell.textLabel.text = [self.nearbyVenues[indexPath.row] name];
-//    FSVenue *venue = self.nearbyVenues[indexPath.row];
-//    if (venue.location.address) {
-//        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@m, %@",
-//                                     venue.location.distance,
-//                                     venue.location.address];
-//    } else {
-//        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@m",
-//                                     venue.location.distance];
-//    }
-//    
+
+    //設定Pin的圖案:
 //    NSString* cateFileName = [self saftyFileName:venue.categories];
 //    UIImage* lastTimeImage = [self loadImageWithName:cateFileName] ;
 //    if (lastTimeImage == nil) {
@@ -135,11 +159,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-//    GPlace *place = self.nearbyVenues[indexPath.row];
-//    UIStoryboard * mainStroyboard = [UIStoryboard storyboardWithName:@"GPMain" bundle:nil];
-//    PlaceDetailViewController *vv = [mainStroyboard instantiateViewControllerWithIdentifier:@"PlaceDetailViewController"];
-//    [vv setCurrentPlace:place];
-//    [self.navigationController pushViewController:vv animated:YES];
+    PFObject *place = [self.nearbyShops objectAtIndex:indexPath.row];
+    PlaceDetailViewController *vv = [self.storyboard instantiateViewControllerWithIdentifier:@"PlaceDetailViewController"];
+    [vv setCurrentPlace:place];
+    [self.navigationController pushViewController:vv animated:YES];
     
 }
 

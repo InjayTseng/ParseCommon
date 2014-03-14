@@ -11,5 +11,6 @@
 @interface NearyByShopsViewController : UIViewController
 
 @property (strong, nonatomic) NSArray* nearbyShops;
+@property (readwrite, nonatomic) CLLocationCoordinate2D location;
 
 @end

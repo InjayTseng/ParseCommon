@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface PlaceMapTwoViewController : UIViewController<MKMapViewDelegate>
+@interface PlaceMapViewController : UIViewController<MKMapViewDelegate>
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
-@property (strong, nonatomic) CLLocation* targetLocation;
+@property (readwrite, nonatomic) CLLocationCoordinate2D targetLocation;
 @property (strong, nonatomic) NSArray* nearbyShops;
 
 @end

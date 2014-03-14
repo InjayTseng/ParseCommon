@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 David Tseng. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DemoViewController.h"
 
 #import "DTParse.h"
-@interface ViewController ()<FBFriendPickerDelegate>
+@interface DemoViewController ()<FBFriendPickerDelegate>
 @property (retain, nonatomic) FBFriendPickerViewController *friendPickerController;
 @end
 
-@implementation ViewController
+@implementation DemoViewController
 
 - (void)viewDidLoad
 {
